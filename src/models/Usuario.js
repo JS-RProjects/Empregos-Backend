@@ -18,7 +18,7 @@ const UsuarioSchema = new mongoose.Schema({
 });
 
 UsuarioSchema.virtual('thumbnail_url').get(function (){
-    return `https://empregos.herokuapp.com/files/${this.thumbnail}`;
+    return `https://empregos-backend.herokuapp.com/files/${this.thumbnail}`;
 });
 
 UsuarioSchema.plugin(autoIncrement.plugin, {
