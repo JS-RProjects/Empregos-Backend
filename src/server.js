@@ -4,7 +4,7 @@ const cors = require('cors');
 const routes = require('./routes');
 const path = require("path");
 
-mongoose.connect('mongodb+srv://reddyyz:root@cluster0-gdydn.mongodb.net/empregos?retryWrites=true&w=majority',{
+mongoose.connect(process.env.DATABASE_LINK,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
