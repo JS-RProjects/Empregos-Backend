@@ -35,7 +35,7 @@ const VagaSchema = new mongoose.Schema({
 });
 
 VagaSchema.virtual('thumbnail_url').get(function (){
-    return `http://localhost:3333/files/${this.thumbnail}`;
+    return `https://empregos.herokuapp.com/files/${this.thumbnail}`;
 });
 
 module.exports = mongoose.model('Vaga',VagaSchema);

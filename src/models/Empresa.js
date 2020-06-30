@@ -22,7 +22,7 @@ const EmpresaSchema = new mongoose.Schema({
 });
 
 EmpresaSchema.virtual('thumbnail_url').get(function (){
-    return `http://localhost:3333/files/${this.thumbnail}`;
+    return `https://empregos.herokuapp.com/files/${this.thumbnail}`;
 });
 
 EmpresaSchema.plugin(autoIncrement.plugin, {
